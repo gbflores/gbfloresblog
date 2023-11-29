@@ -12,17 +12,17 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 
 const resolvedImageWithDomain = new URL(
   "/opengraph.jpg",
-  Astro.site
+  Astro.site,
 ).toString();
 
 const { title } = Astro.props;
 
 const makeTitle = title
-  ? title + " | " + "Astroship"
-  : "Astroship - Starter Template for Astro with Tailwind CSS";
+  ? title + " | " + "Mescla Digital"
+  : "Mescla Digital - Descubra os serviços personalizados da Mescla Digital - Criação de Sites, Desenvolvimento de Sistemas, Conteúdo Impactante e Mais.";
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -33,23 +33,12 @@ const makeTitle = title
     <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
     <SEO
       title={makeTitle}
-      description="Astroship is a starter website template for Astro built with TailwindCSS."
+      description="Mescla Digital - Descubra os serviços personalizados da Mescla Digital - Criação de Sites, Desenvolvimento de Sistemas, Conteúdo Impactante e Mais."
       canonical={canonicalURL}
       twitter={{
         creator: "@surjithctly",
         site: "@web3templates",
         card: "summary_large_image",
-      }}
-      openGraph={{
-        basic: {
-          url: canonicalURL,
-          type: "website",
-          title: `Astroship - Starter Template for Astro`,
-          image: resolvedImageWithDomain,
-        },
-        image: {
-          alt: "Astroship Homepage Screenshot",
-        },
       }}
     />
   </head>
@@ -58,8 +47,6 @@ const makeTitle = title
     <slot />
     <Footer />
     <style is:global>
-      /* Improve Page speed */
-      /* https://css-tricks.com/almanac/properties/c/content-visibility/ */
       img {
         content-visibility: auto;
       }

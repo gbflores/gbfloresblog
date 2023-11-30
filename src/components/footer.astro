@@ -1,19 +1,43 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon";
+
+const footerIcons = [
+  {
+    title: "Instagram",
+    href: "https://www.instagram.com/",
+    icon: "ant-design:instagram-outlined",
+  },
+  {
+    title: "Whatsapp",
+    href: "https://www.instagram.com/",
+    icon: "ant-design:whats-app-outlined",
+  },
+  {
+    title: "Linkedin",
+    href: "https://www.instagram.com/",
+    icon: "ant-design:linkedin-filled",
+  },
+  {
+    title: "Facebook",
+    href: "https://www.instagram.com/",
+    icon: "ant-design:facebook-filled",
+  },
+];
+---
+
 <footer class="my-20">
   <p class="text-center text-sm text-slate-500">
-    Copyright © {new Date().getFullYear()} Astroship. All rights reserved.
+    Copyright © {new Date().getFullYear()} Mescla Digital. Todos os direitos
+    reservados.
   </p>
-  <!--
-    Can we ask you a favor 🙏
-    Please keep this backlink on your website if possible.
-    or Purchase a commercial license from https://web3templates.com
-  -->
-  <p class="text-center text-xs text-slate-500 mt-1">
-    Made by <a
-      href="https://web3templates.com"
-      target="_blank"
-      rel="noopener"
-      class="hover:underline">
-      Web3Templates
-    </a>
-  </p>
+  <div class="flex gap-8 md:gap-20 items-center justify-center mt-10 flex-wrap">
+    {
+      footerIcons.map((item) => (
+        <a rel={item.title} href={item.href}>
+          <Icon class="h-8 md:h-12" name={item.icon} />
+        </a>
+      ))
+    }
+  </div>
 </footer>

@@ -14,18 +14,26 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 <Layout title="About">
   <Container>
     <Sectionhead>
-      <Fragment slot="title">About</Fragment>
-      <Fragment slot="desc">We are a small passionate team.</Fragment>
+      <Fragment slot="title">Sobre</Fragment>
+      <Fragment slot="desc">
+        Tecnologia é a nossa paixão. Mesclar a nossa paixão com sua empresa, é
+        nosso objetivo.
+      </Fragment>
     </Sectionhead>
 
     <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
       <h2 class="font-bold text-3xl text-gray-800">
-        Empowering the world with Astro.
+        Como a Mescla Digital surgiu?
       </h2>
       <p class="text-lg leading-relaxed text-slate-500">
-        We're a multi-cultural team from around the world! We come from diverse
-        backgrounds, bringing different personalities, experiences and skills to
-        the job. This is what makes our team so special.
+        Prazer, sou o Guilherme. Foram 10 anos trabalhando em agência, somente
+        revendendo os mesmos produtos sem pensar no principal dentro da área, a
+        tecnologia. Se você tem site e não é programador, deve ter contratado um
+        freelancer ou uma empresa/agência para isso. A MAIORIA está vendendo
+        projetos desatualizados, pesados, comprometidos e o pior, por um preço
+        absurdo.
+        <br />
+        <h4 class="font-bold text-2xl text-gray-800">Mas e aí?</h4>
       </p>
     </div>
     <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
@@ -47,9 +55,7 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
             </div>
 
             <div class="mt-4 text-center">
-              <h2 class="text-lg text-gray-800">
-                {teamMemberEntry.data.name}
-              </h2>
+              <h2 class="text-lg text-gray-800">{teamMemberEntry.data.name}</h2>
               <h3 class="text-sm text-slate-500">
                 {teamMemberEntry.data.title}
               </h3>

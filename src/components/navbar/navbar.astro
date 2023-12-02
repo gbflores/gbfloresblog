@@ -1,6 +1,8 @@
 ---
 import Container from "@components/container.astro";
 import Link from "@components/ui/link.astro";
+import { Picture } from "@astrojs/image/components";
+import logoMescla from "assets/logo.png";
 import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 
@@ -28,10 +30,14 @@ const menuitems = [
   <header class="flex flex-col lg:flex-row justify-between items-center my-5">
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
-        <a href="/" class="text-lg"
-          ><span class="font-bold text-slate-800">Mescla</span><span
-            class="text-slate-500">Digital</span
-          >
+        <a href="/" class="text-lg">
+          <Picture
+            src={logoMescla}
+            alt="Mescla Digital"
+            widths={[400, 600]}
+            width={400}
+            format="avif"
+          />
         </a>
         <div class="block lg:hidden">
           <MenuIcon class="w-4 h-4 text-gray-800" />

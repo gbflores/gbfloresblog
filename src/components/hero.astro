@@ -1,22 +1,25 @@
 ---
-import { Picture } from "@astrojs/image/components";
-import heroImage from "assets/eu.jpg";
 import Link from "@components/ui/link.astro";
 import { Icon } from "astro-icon";
+import { Image } from "astro:assets";
+import heroImage from "../assets/eu.jpg";
 ---
 
 <main class="flex place-items-center pt-16 pb-8">
   <div class="flex-auto w-20 py-6 md:order-1 hidden md:block rounded-sm">
-    <Picture
-      src={heroImage}
-      alt="Guilherme FLores"
-      widths={[200, 400, 600]}
-      aspectRatio="4:4"
-      sizes="(max-width: 800px) 100vw, 620px"
-      loading="eager"
-      format="jpg"
-      class="rounded-lg"
-    />
+    {
+      heroImage && (
+        <Image
+          width="300"
+          height="300"
+          format="avif"
+          quality="mid"
+          src={heroImage}
+          alt={heroImage}
+          class="rounded-lg"
+        />
+      )
+    }
   </div>
   <div class="flex-auto w-80">
     <h1

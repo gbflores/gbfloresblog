@@ -2,7 +2,7 @@
 import { getCollection } from "astro:content";
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
-import { Picture } from "@astrojs/image/components";
+import { Image } from "astro:assets";
 
 // Generate a new path for every collection entry
 export async function getStaticPaths() {
@@ -16,6 +16,7 @@ export async function getStaticPaths() {
 // Get the entry directly from the prop on render
 const { entry } = Astro.props;
 const { Content } = await entry.render();
+
 ---
 
 <Layout title={entry.data.title}>
@@ -72,16 +73,11 @@ const { Content } = await entry.render();
       >
     </div>
     <div class="mx-auto max-w-3xl mt-14 text-center">
-      <Picture
-        src={entry.data.image.src}
-        alt={entry.data.image.alt}
-        sizes="(max-width: 800px) 100vw, 800px"
-        widths={[200, 400, 800]}
-        aspectRatio="16:9"
-        loading="eager"
-        format="jpg"
-        class="rounded-lg"
-      />
+      {
+        entry.data.image.src && (
+          <Image width="1200" format="avif" quality="mid" src={entry.data.image.src} alt={entry.data.image.alt}} />
+        )
+      }
     </div>
   </Container>
 </Layout>

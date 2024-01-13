@@ -3,7 +3,7 @@ draft: false
 title: "Next.js 14 Eleva o Desenvolvimento Web para Novas Alturas com Recursos Avançados"
 snippet: "Next.js 14 Eleva o Desenvolvimento Web para Novas Alturas com Recursos Avançados"
 image: {
-    src: "assets/next-js-14.jpg",
+    src: "../../assets/next-js-14.jpg",
     alt: "full stack web development"
 }
 publishDate: "2024-01-05 11:39"

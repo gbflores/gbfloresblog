@@ -1,0 +1,69 @@
+---
+draft: false
+title: "Desvendando o básico para trabalho em projetos com Github."
+snippet: "Desvendando o básico para trabalho em projetos com Github.."
+image: {
+    src: "src/assets/github.jpg",
+    alt: "Github"
+}
+publishDate: "2024-01-07 11:39"
+category: "Tutorial"
+author: "Guilherme Flores"
+tags: [github, tutorial]
+url: ""
+---
+
+## Comandos Básicos do GitHub:
+
+### Clone:
+O comando git clone é usado para criar uma cópia local de um repositório remoto no ambiente de desenvolvimento do usuário. Por exemplo:
+
+```
+git clone https://github.com/usuario/nome-do-repositorio.git
+```
+### Checkout:
+O comando git checkout permite alternar entre diferentes branches no repositório local. Para criar e alternar para uma nova branch, use:
+```
+git checkout -b nome-da-nova-branch
+```
+### Pull:
+O comando git pull é utilizado para atualizar a branch local com as alterações mais recentes do repositório remoto. Isso sincroniza o código local com o código no GitHub:
+```
+git pull origin nome-da-branch
+```
+### Commit:
+O comando git commit é crucial para salvar alterações no repositório local. Certifique-se de adicionar uma mensagem descritiva para cada commit:
+```
+git commit -m "Mensagem descritiva do commit"
+```
+### Push:
+Para enviar as alterações locais para o repositório remoto, utilize o comando git push:
+```
+git push origin nome-da-branch
+```
+### Pull Request (PR):
+Os Pull Requests são essenciais para colaboração. Eles permitem revisões de código e a integração de alterações. Após realizar um commit na sua branch, você pode criar um PR no GitHub.
+
+### Merge:
+Uma vez que um PR é revisado e aprovado, é possível realizar o merge das alterações na branch principal. Utilize:
+```
+git checkout nome-da-branch-principal
+git merge nome-da-branch-do-PR
+```
+
+## Dicas extras
+
+#### Branching Estratégico:
+Adote uma estratégia de branching que se alinhe à metodologia de desenvolvimento da empresa, como o uso de branches por feature ou por release.
+
+#### Comentários Significativos:
+Ao realizar commits e abrir PRs, adote a prática de fornecer comentários significativos. Isso facilita a compreensão do histórico de alterações.
+
+#### Revisões de Código:
+Estabeleça processos para revisões de código. Os PRs são uma excelente oportunidade para garantir a qualidade e a conformidade com as diretrizes do projeto.
+
+#### Atualizações Frequentes:
+Encoraje atualizações frequentes do repositório, minimizando conflitos e mantendo todos os membros da equipe atualizados.
+
+#### Documentação:
+Inclua uma prática robusta de documentação para garantir que todos os membros da equipe compreendam a estrutura do repositório e as boas práticas de desenvolvimento.

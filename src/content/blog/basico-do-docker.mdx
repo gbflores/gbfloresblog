@@ -1,0 +1,72 @@
+---
+draft: false
+title: "Desvendando o básico para trabalho em projetos com Docker."
+snippet: "Desvendando o básico para trabalho em projetos com Docker.."
+image: {
+    src: "src/assets/docker.jpg",
+    alt: "Docker"
+}
+publishDate: "2024-01-08 11:39"
+category: "Tutorial"
+author: "Guilherme Flores"
+tags: [docker, tutorial]
+url: ""
+---
+
+## Comandos Essenciais do Docker:
+
+### Run:
+O comando docker run é usado para iniciar um contêiner a partir de uma imagem. Por exemplo, para executar um contêiner Ubuntu:
+
+```
+docker run -it ubuntu
+```
+### Build:
+Utilize o comando docker build para construir uma imagem Docker a partir de um Dockerfile no diretório atual:
+
+```
+docker build -t nome-da-imagem .
+```
+### PS (Listar Contêineres em Execução):
+O comando docker ps exibe uma lista dos contêineres em execução no momento:
+
+```
+docker ps
+```
+### Pull (Baixar uma Imagem):
+O comando docker pull é usado para baixar uma imagem do Docker Hub ou de um registro específico:
+
+```
+docker pull nome-do-registro/nome-da-imagem:tag
+```
+### Stop e Start:
+Interrompa um contêiner em execução com docker stop e reinicie com docker start:
+
+```
+docker stop nome-do-contêiner
+docker start nome-do-contêiner
+```
+
+### Exec (Executar Comandos em um Contêiner em Execução):
+Utilize o comando docker exec para executar comandos dentro de um contêiner em execução:
+
+```
+docker exec -it nome-do-contêiner comando
+```
+
+## Dicas extras do docker
+
+#### Dockerfile Eficiente:
+Otimize seus Dockerfiles para garantir que suas imagens sejam eficientes e contenham apenas o necessário.
+
+#### Orquestração com Docker Compose:
+Explore o uso do Docker Compose para gerenciar ambientes complexos com várias dependências.
+
+#### Volumes para Persistência de Dados:
+Utilize volumes do Docker para persistência de dados, garantindo que dados importantes sejam mantidos mesmo após o contêiner ser removido.
+
+#### Monitoramento e Logística:
+Implemente práticas de monitoramento e logging para rastrear o desempenho e comportamento dos contêineres em produção.
+
+#### Segurança e Controle de Acesso:
+Adote medidas de segurança, como controle de acesso e limitação de recursos, para proteger seus contêineres.

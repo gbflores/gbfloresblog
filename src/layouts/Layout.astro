@@ -12,17 +12,17 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 
 const resolvedImageWithDomain = new URL(
   "/opengraph.jpg",
-  Astro.site,
+  Astro.site
 ).toString();
 
 const { title } = Astro.props;
 
 const makeTitle = title
-  ? title + " | " + "Mescla Digital"
-  : "Mescla Digital - Descubra os serviços personalizados da Mescla Digital - Criação de Sites, Desenvolvimento de Sistemas, Conteúdo Impactante e Mais.";
+  ? title + " | " + "Guilherme Flores"
+  : "Guilherme Flores - Developer Full Stack";
 ---
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -33,13 +33,8 @@ const makeTitle = title
     <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
     <SEO
       title={makeTitle}
-      description="Mescla Digital - Descubra os serviços personalizados da Mescla Digital - Criação de Sites, Desenvolvimento de Sistemas, Conteúdo Impactante e Mais."
+      description="Guilherme Flores - Developer Full Stack"
       canonical={canonicalURL}
-      twitter={{
-        creator: "@surjithctly",
-        site: "@web3templates",
-        card: "summary_large_image",
-      }}
     />
   </head>
   <body>

@@ -4,11 +4,6 @@ import { Picture } from "@astrojs/image/components";
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
-
-// Filter team entries with 'draft: false' & date before current date
-const publishedTeamMembers = await getCollection("team", ({ data }) => {
-  return !data.draft && data.publishDate < new Date();
-});
 ---
 
 <Layout title="About">
@@ -16,53 +11,127 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
     <Sectionhead>
       <Fragment slot="title">Sobre</Fragment>
       <Fragment slot="desc">
-        Tecnologia é a nossa paixão. Mesclar a nossa paixão com sua empresa, é
-        nosso objetivo.
+        Tecnologia é a minha paixão. Desenvolver e analisar é apenas um hobby.
       </Fragment>
     </Sectionhead>
 
     <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
-      <h2 class="font-bold text-3xl text-gray-800">
-        Como a Mescla Digital surgiu?
-      </h2>
+      <h2 class="font-bold text-3xl text-gray-800">Qual o caminho traçado?</h2>
       <p class="text-lg leading-relaxed text-slate-500">
-        Prazer, sou o Guilherme. Foram 10 anos trabalhando em agência, somente
-        revendendo os mesmos produtos sem pensar no principal dentro da área, a
-        tecnologia. Se você tem site e não é programador, deve ter contratado um
-        freelancer ou uma empresa/agência para isso. A MAIORIA está vendendo
-        projetos desatualizados, pesados, comprometidos e o pior, por um preço
-        absurdo.
-        <br />
-        <h4 class="font-bold text-2xl text-gray-800">Mas e aí?</h4>
+        Prazer, sou o Guilherme. Minha carreira como dev iniciou no ano de 2009,
+        pós conclusão do meu pós técnico em análise e desenvolvimento de
+        sistemas.
+        <br /><br />
+        A partir daí comecei a trabalhar na área de desenvolvimento, iniciando minha
+        carreira na empresa Portal Público, onde desenvolvi sistemas de nota fiscal
+        eletrônica usando PHP e javascript puro.
+        <br /><br />
+        Fui contratado por uma agência em outra cidade para desenvolver sites e gerenciadores,
+        utilizando php/mysql e também js. Nesse tempo, já aumentei minha frequência
+        de uso de css.
+        <br /><br />
+        Após um período, fui recontratado pelo Portal Público como pleno, e fiz melhorias
+        no sistema e gerenciadores, também trabalhei forte em integrações de banco
+        de dados mysql e postgres.
+        <br /><br />
+        Por um colega de trabalho do Portal Público, fui contratado pelo TRF para
+        trabalhar no sistema legado de processos do Rio Grande do Sul, período no
+        qual utilizei framework interno de php.
+        <br /><br />
+        Após alguns meses, fui chamado para trabalhar na maior agência web da época,
+        chamada Reweb. Nesse empresa, desenvolvi e participei de inúmeros projetos,
+        sempre realizando frontend e backend. Nessa empresa, utilizava framework
+        Codeigniter, banco de dados Mysql, trabalhei com Linux e Windows, Github,
+        Javascript, CakePhp e Laravel. O período nessa empresa foi de grande aprendizado,
+        pois realizava projetos em um tempo mínimo viável e também dediquei um tempo
+        em automatizações de códigos para evitar retrabalhos.
+        <br /><br />
+        Fui convidado por um antigo gestor da Reweb a ser sócio de uma nova agência,
+        a partir daí surgiu minha entrada na Trunfo, onde 4 anos depois passou a
+        se chamar Feito - Conquiste Clientes. Como COO da empresa e Dev Php Full
+        Stack Senior, dediquei meu tempo à construção de sistemas, sites, CRMs, landing
+        pages, blogs e gerenciadores, utilizando principalmente o CodeIgniter. Também
+        trabalhei com WordPress, Magento e outras linguagens, sempre buscando oferecer
+        soluções de qualidade. Ao longo dos projetos, o banco de dados MySQL foi
+        minha escolha frequente. Além do desenvolvimento, também participei na criação
+        de artes digitais e impressas, como revistas, outdoors, posts para redes
+        sociais e flyers. Como gestor, desempenhei um papel fundamental na gestão
+        de pautas, comunicação com clientes e condução de reuniões. Através do desenvolvimento
+        de ferramentas personalizadas, otimizei nosso tempo interno e externo, alcançando
+        uma maior eficiência em todas as tarefas.
+        <br /><br />
       </p>
-    </div>
-    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
-      {
-        publishedTeamMembers.map((teamMemberEntry) => (
-          <div class="group">
-            <div class="w-full aspect-square">
-              <Picture
-                src={teamMemberEntry.data.avatar.src}
-                alt={teamMemberEntry.data.avatar.alt}
-                sizes="(max-width: 800px) 100vw, 400px"
-                widths={[200, 400]}
-                aspectRatio="1:1"
-                background="#ffffff"
-                fit="cover"
-                position="center"
-                class="w-full rounded-md rounded transition group-hover:-translate-y-1 group-hover:shadow-xl"
-              />
-            </div>
-
-            <div class="mt-4 text-center">
-              <h2 class="text-lg text-gray-800">{teamMemberEntry.data.name}</h2>
-              <h3 class="text-sm text-slate-500">
-                {teamMemberEntry.data.title}
-              </h3>
-            </div>
-          </div>
-        ))
-      }
+      <h4 class="font-bold text-2xl text-gray-800">Mas e agora?</h4>
+      <p class="text-lg leading-relaxed text-slate-500">
+        Atualmente estou na Maxxi Econômica Farmácias como gestor do marketing
+        digital e Dev Sênior Full Stack. Participo não somente do
+        desenvolvimento como na estratégia da empresa. São diversas tecnologias
+        trabalhadas: Banco de dados SQL, Boas práticas de programação,
+        Desenvolvimento full stack , Next.js, Marketing digital, Scrum, Laravel,
+        Git, nextjs, Desenvolvimento de back-end, Firebird, Node.js, Bootstrap,
+        Gestão de tempo, MySQL, PHP, JavaScript, PostgreSQL, Desenvolvimento de
+        front-end, Adobe Illustrator , Adobe Photoshop, Gestão de projetos,
+        Gestão de equipes, Otimização de processos.
+        <br /><br />
+        No momento estou desenvolvendo 5 projetos diferentes. Todos com foco em venda,
+        mas com interatividade de funcionários e também com dados gerais e automatizações
+        para otimizar o tempo de todos. Meu maior trabalho hoje é não somente vender
+        pelo ecommerce, mas também gerar valor e poupar tempo de trabalhos que demandam
+        um serviço grande, fazendo com que o mesmo tenha uma diminuição, levando
+        aos funcionários uma realocação de tempo para focar no resultado da empresa,
+        ao mesmo tempo que crio e desenvolvo peças e campanhas sazonais internas
+        e externas, além de todo o gerenciamento de redes sociais e atendimento ao
+        cliente digital.
+      </p>
+      <h4 class="font-bold text-2xl text-gray-800 mt-5">
+        Resumo do meu conhecimento
+      </h4>
+      <ul
+        class="list-none hover:list-disc text-lg leading-relaxed text-slate-500">
+        <li class="mb-2">
+          Desenvolvimento PHP backend utilizando frameworks como Laravel e
+          Codeigniter. E blades como frontend.
+        </li>
+        <li class="mb-2">
+          Criação e otimização de consultas SQL em bancos de dados relacionais,
+          como MySQL, Firebird e PostgreSQL.
+        </li>
+        <li class="mb-2">
+          Desenvolvimento de APIs RESTful para integração com sistemas externos
+          utilizando Next.js e Laravel.
+        </li>
+        <li class="mb-2">
+          Experiência avançada em HTML, CSS, JavaScript, e frameworks frontend
+          como Vue.js e React.
+        </li>
+        <li class="mb-2">
+          Utilização eficiente de ferramentas de controle de versão, como Git.
+        </li>
+        <li class="mb-2">
+          Implementação de práticas de segurança em aplicações web.
+        </li>
+        <li class="mb-2">
+          Configuração e administração de servidores web (Apache, Nginx) e
+          servidores de aplicação.
+        </li>
+        <li class="mb-2">
+          Utilização de Docker para empacotamento e distribuição de aplicações.
+        </li>
+        <li class="mb-2">
+          Conhecimento em metodologias ágeis, como Scrum e Kanban.
+        </li>
+        <li class="mb-2">
+          Colaboração efetiva em equipes multidisciplinares e gestão de pessoas.
+        </li>
+        <li class="mb-2">
+          Experiência em reuniões com clientes, entendimento de negócio e
+          vendas.
+        </li>
+        <li class="mb-2">
+          Conhecimentos avançados de UX/UI, e utilização de Figma, pacote
+          Adobe(sendo os mais utilizados Illustrator, Photoshop e Premiere)
+        </li>
+      </ul>
     </div>
   </Container>
 </Layout>

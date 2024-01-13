@@ -51,11 +51,23 @@ const { Content } = await entry.render();
     <div class="mx-auto prose prose-lg mt-6 max-w-3xl">
       <Content />
     </div>
+    <div class="mx-auto max-w-3xl mt-14">
+      {
+        entry.data.url && (
+          <div class="flex gap-2 mt-3 items-center flex-wrap md:flex-nowrap">
+            Url:{" "}
+            <a target="_blank" href={entry.data.url}>
+              {entry.data.url}
+            </a>
+          </div>
+        )
+      }
+    </div>
     <div class="text-center mt-8">
       <a
         href="/blog"
         class="bg-gray-100 px-5 py-3 rounded-md hover:bg-gray-200 transition"
-        >← Back to Blog</a
+        >← Voltar para o Blog</a
       >
     </div>
   </Container>

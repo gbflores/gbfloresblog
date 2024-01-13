@@ -3,7 +3,7 @@ draft: false
 title: "Lançamento do Astro 4.1"
 snippet: "Lançamento do Astro 4.1."
 image: {
-    src: "src/assets/astro-4-1.jpg",
+    src: "assets/astro-4-1.jpg",
     alt: "Astro 4.1"
 }
 publishDate: "2024-01-06 11:39"
